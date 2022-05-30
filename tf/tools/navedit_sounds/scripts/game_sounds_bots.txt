@@ -1,0 +1,334 @@
+// **********************************************************************************************
+// ** Port of L4D's `game_sounds_bots.txt`. Some sounds do not exist in TF2:
+// ** - "buttons/bell1.wav" (replaced with "items/pumpkin_drop.wav")
+// ** - "buttons/blip2.wav" (replaced with "buttons/button3.wav")
+// ** - "buttons/button11.wav" (replaced with "mvm/mvm_money_vanish.wav")
+// ** - "weapons/knife/knife_hitwall1.wav" (replaced with "weapons/shotgun/shotgun_dbl_fire7.wav")
+// ** - "buttons/latchunlocked2" (replaced with "replay/showdetails.wav")
+// **
+// ** * Fire questions away at any curious blocks, and ill inform what are they used for.
+// **********************************************************************************************
+// Glossary:
+// - "Enable"		: if areas are already selected beforehand
+// - "NoMarkedArea"	: selecting a new area in sight has failed
+// - "MarkedArea"	: selected a new area in sight
+
+// ***********************
+// ==   CSS LEFTOVERS   ==
+// ***********************
+// - I would put this at the bottom, but the KeyValues format CHOKES if I put them at the very bottom (as if its like I'm in the C programming language)
+// "Bot.StuckSound"
+// {
+	// "channel"	"CHAN_VOICE"
+	// "volume"	"VOL_NORM"
+	// "soundlevel"  	"SNDLVL_NORM"
+	// "pitch"		"PITCH_NORM"
+	// "wave"		"buttons/bell1.wav"
+// }
+
+// "Bot.StuckStart"
+// {
+	// "channel"	"CHAN_VOICE"
+	// "volume"	"VOL_NORM"
+	// "soundlevel"  	"SNDLVL_NORM"
+	// "pitch"		"PITCH_NORM"
+	// "wave"		"buttons/button11.wav"
+// }
+
+// ** Already disabled beforehand **
+// *********************************
+// "Bot.FellOff"
+// {
+	// "channel"	"CHAN_VOICE"
+	// "volume"	"VOL_NORM"
+	// "soundlevel"  	"SNDLVL_NORM"
+	// "pitch"		"PITCH_NORM"
+	// "wave"		"bot/aw_hell.wav"
+// }
+
+"EDIT_TOGGLE_PLACE_MODE"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+
+"EDIT_PLACE_PICK"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+"EDIT_DELETE"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+
+"EDIT_MERGE.Enable"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+"EDIT_MERGE.Disable"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"mvm/mvm_money_vanish.wav"
+}
+
+"EDIT_MARK.Enable"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+"EDIT_MARK.Disable"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/button3.wav"
+}
+
+// "nav_mark_unnamed"
+// ** This command selects all nav areas that all don't have a "Place Name".
+"EDIT_MARK_UNNAMED.Enable"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+"EDIT_MARK_UNNAMED.NoMarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+"EDIT_MARK_UNNAMED.MarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/button3.wav"
+}
+
+// If the selected nav area's direction is already equal to the amount of directions (4). I guess it means the nav area's "full" already
+// When multiple areas are selected, it signals connecting has halted. (?)
+"EDIT_CONNECT.AllDirections"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"mvm/mvm_money_vanish.wav"
+}
+
+"EDIT_CONNECT.Added"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+"EDIT_DISCONNECT.MarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+
+"EDIT_DISCONNECT.NoMarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"mvm/mvm_money_vanish.wav"
+}
+
+
+"EDIT_SPLICE.MarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+
+"EDIT_SPLICE.NoMarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"mvm/mvm_money_vanish.wav"
+}
+
+"EDIT_SELECT_CORNER.MarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+
+"EDIT_SELECT_CORNER.NoMarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"mvm/mvm_money_vanish.wav"
+}
+
+"EDIT_MOVE_CORNER.MarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+
+"EDIT_MOVE_CORNER.NoMarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"mvm/mvm_money_vanish.wav"
+}
+
+"EDIT.ToggleAttribute"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"95,102"
+	"wave"		")ui/killsound_percussion.wav"
+}
+
+"EDIT_SPLIT.NoMarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"mvm/mvm_money_vanish.wav"
+}
+
+"EDIT_SPLIT.MarkedArea"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"weapons/shotgun/shotgun_dbl_fire7.wav"
+}
+
+"EDIT_BEGIN_AREA.Creating"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"mvm/mvm_money_vanish.wav"
+}
+
+"EDIT_BEGIN_AREA.NotCreating"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/button3.wav"
+}
+
+"EDIT_END_AREA.Creating"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/blip1.wav"
+}
+
+"EDIT_END_AREA.NotCreating"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"mvm/mvm_money_vanish.wav"
+}
+
+"EDIT_WARP_TO_MARK"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"weapons/recon_ping.wav" // this was "buttons/blip1.wav"
+}
+
+// nav_toggle_place_painting
+// ** Only usable when 'nav_toggle_place_mode' is active.
+// ** Don't mind the funny inaccurate names :o
+// ******************************************************
+"Bot.EditSwitchOn"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+	"wave"		"buttons/lightswitch2.wav"
+}
+
+
+"Bot.EditSwitchOff"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"  	"SNDLVL_NORM"
+	"pitch"		"PITCH_NORM"
+//	"wave"		"buttons/latchunlocked2.wav"
+	"wave"		"replay/showdetails.wav"
+}
