@@ -14,16 +14,6 @@ Imagining an example scenario might help. Say there's a medium-sized mini garage
 - - The bot can alternate its movement thanks to more path segments. Maybe he'll walk a zig-zag? Maybe a crooked line instead? Beats me.
 - - - This also means that a bot can react much better in combat, knowing better how to dodge and retreat.
 
-++ "nav_compress_id" ++
------------------------
-Deserves an honourable mention. Note "nav_generate_incremental" automatically does this after its done.
-
-The name is misleading for modern navigation meshes, its less of a "nav_compress_id" and more a "nav_sort_id". This command reorganises all IDs to be one number after another accordingly, rather than one-to-six numbers after another.
-
-So... what does this comamnd do? I guess one is, comparing the new IDs to their old ones lets you guess how much nav areas were removed/merged. Another one I can think of, makes IDs doable   to be remembered, may be useful for commands that need it, like "nav_warp_to_mark".
-
-Does this affect performance? Maybe, but it will be very little. It might reduce workload for programs that want to interact with the navigation mesh at best.
-
 ++ NAV_MESH_PRECISE ++
 ----------------------
 Disables 'Obstacle Avoidance' bot behavior; 'Obstacle Avoidance' prevents bots from being too close to things like geometry, so they can't be stuck. This behavior can be noticed when they walk through small doorway entrances.

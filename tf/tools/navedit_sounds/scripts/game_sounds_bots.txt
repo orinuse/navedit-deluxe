@@ -242,8 +242,8 @@
 	"channel"	"CHAN_VOICE"
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
-	"pitch"		"95,102"
-	"wave"		")ui/killsound_percussion.wav"
+	"pitch"		"PITCH_NORM"
+	"wave"		")passtime/ball_intercepted.wav"
 }
 
 "EDIT_SPLIT.NoMarkedArea"
